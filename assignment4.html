@@ -1,0 +1,61 @@
+<!-- Question 1
+By how many ways we can access elements in the DOM and write about them in brief?
+
+(ANSWER:)
+we can access elements in the DOM by id,by tag name,by class name,by CSS selectors,by HTML object collections.
+
+>>>If you want to find all HTML elements with Id, use getElementsById().
+*Example to finds the element with id="para":
+
+var ele= document.getElementById("para");
+If the element is found, the method will return the element as an object.
+If the element is not found, ele will contain null.
+
+>>>If you want to find all HTML elements with the same Tag name, use getElementsByTagName().
+*Example to get Elements by Tag Name:
+
+This finds all <p> elements and return array as value of x even if you have only 1 element then also it gives you an array.
+var x = document.getElementsByTagName("p");
+
+>>>If you want to find all HTML elements with the same class name, use getElementsByClassName().
+*Example to get Elements by Class Name:
+
+This example returns a list of all elements with class="intro".
+var x = document.getElementsByClassName("intro");
+
+>>>Finding HTML Elements by CSS Selectors
+If you want to find all HTML elements that match a specified CSS selector (id, class names, types, attributes, values of attributes, etc), use the querySelectorAll() method.
+This example returns a list of all <p> elements with class="intro".
+
+var x = document.querySelectorAll("p.intro"); -->
+
+
+
+
+<!-- Question 2
+Write a javascript program that will take 2 numbers from the HTML page and display them on the
+HTML page after the addition of those 2 numbers. -->
+
+<html>
+    <body>
+        <p>Enter First Number:
+        <input type="text" id="num1"/> </p>
+        <p>Enter Second Number:
+        <input type="text" id="num2"></p>
+        <input type="button" name="Add" value="Add" onclick="add()">
+        <input type="text" id="result"> 
+
+        <script>
+
+            function add(){
+
+            var number1=document.getElementById("num1").value;
+            var number2=document.getElementById("num2").value;
+            var sum= Number(number1) + Number(number2);
+            document.getElementById("result").value = sum;
+            }
+
+        </script>
+
+    </body>
+</html>
